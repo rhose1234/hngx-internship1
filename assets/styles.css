@@ -3,7 +3,7 @@
     margin: 0;
     box-sizing: border-box;
 }
-.wrapper{
+.personal-data{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -16,30 +16,30 @@
    height: auto;
 
 }
-.wrapper h2{
+.personal-data h2{
 font-weight: 900;
 font-size: 60px ;
 }
-.wrapper h5{
+.personal-data h5{
     font-size: 40px ;
     margin: 20px;
 }
-.wrapper img{
+.personal-data img{
     border-radius: 50%  ;
     width: 60%;
     margin: 20px;
 }
-.wrapper p{
+.personal-data p{
     font-size: 2rem;
     margin-top: 20px;
     margin-bottom: 30px;
 }
-.wrapper p span{
+.personal-data p span{
     font-size: 20px;
     font-weight: 500;
     
 }
-.wrapper .card-text a{
+.personal-data  a{
 color: yellow;
 text-decoration: none;
 height: 40px;
