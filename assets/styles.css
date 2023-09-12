@@ -16,22 +16,20 @@
    height: auto;
 
 }
-
+.personal-data h2{
+    font-size: 3rem;
+}
 .personal-data img{
     border-radius: 50%  ;
     width: 60%;
     margin: 20px;
 }
 .personal-data p{
-    font-size: 2rem;
+    font-size: 1.4rem;
     margin-top: 20px;
     margin-bottom: 30px;
 }
-.personal-data p span{
-    font-size: 20px;
-    font-weight: 500;
-    
-}
+
 .personal-data  a{
 color: yellow;
 text-decoration: none;
