@@ -16,14 +16,7 @@
    height: auto;
 
 }
-.personal-data h2{
-font-weight: 900;
-font-size: 60px ;
-}
-.personal-data h5{
-    font-size: 40px ;
-    margin: 20px;
-}
+
 .personal-data img{
     border-radius: 50%  ;
     width: 60%;
