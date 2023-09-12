@@ -1,31 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/assets/styles.css" >
-    <title>Document</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week 1 Task</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
 
-    <div class="wrapper">
-        <div class="card">
-            <div class="card-title">
-                <h2>Frontend track</h2>
-                <h5>Akorede Rose</h5>
-            </div>
-            <img src="/assets/img/profile.jpg" width="75" alt="img">
-            
-            <div class="card-text">
-                <p>Time of the day: <span>9:41pm</span></p>
-                <p>Day of the week: <span>Monday, September 11th, 2023.</span></p>
 
-                <p>Track: <span>Frontend</span></p>
+    <div class="personal-data">
+        <h2 data-testid="slackUserName">Akorede Rose</h2>
+  
+        <img src="./assets/img/profile.jpg" alt="Marvelous" data-testid="slackDisplayImage" />
 
-                <a href="https://github.com/rhose1234/hngx-internship1" >Link to github repository</a>
-            </div>
-        </div>
-    </div>
+
+        <p data-testid="currentDayOfTheWeek" id="dayOfTheWeek"></p>
+      
+        <p data-testid="currentUTCTime" id="utcTime"></p>
+
+        <p data-testid="myTrack">Frontend Track</p>
+
+      <a href="https://github.com/rhose1234/hngx-internship1" data-testid="githubURL">Github Repository</a
     
-</body>
+    </div>
+
+    <script>
+      // Function to update the day of the week and UTC time
+      function updateDateTime() {
+        const currentDate = new Date();
+        const dayOfTheWeekElement = document.getElementById("dayOfTheWeek");
+        const utcTimeElement = document.getElementById("utcTime");
+
+        // Display the current day of the week
+        const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        const dayIndex = currentDate.getUTCDay();
+        const dayName = daysOfWeek[dayIndex];
+
+        dayOfTheWeekElement.textContent = dayName;
+
+        // Display the current UTC time in a readable format
+        const utcTimeString = currentDate.toISOString();
+        utcTimeElement.textContent = utcTimeString;
+      }
+
+      // Update the day of the week and UTC time every second
+      setInterval(updateDateTime, 1000);
+
+      // Initial update
+      updateDateTime();
+    </script>
+  </body>
 </html>
